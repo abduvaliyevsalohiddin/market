@@ -8,19 +8,19 @@ from drf_yasg.utils import swagger_auto_schema
 
 
 class SelectedProductListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = SelectedProductSerializer
     queryset = SelectedProduct.objects.all()
 
 
 class SelectedProductRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = SelectedProductSerializer
     queryset = SelectedProduct.objects.all()
 
 
 class CartListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CartSerializer
     queryset = Cart.objects.all()
 
@@ -32,24 +32,24 @@ class CartRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 
 
 class CartItemListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CartItemSerializer
     queryset = CartItem.objects.all()
 
 
 class CartItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CartItemSerializer
     queryset = CartItem.objects.all()
 
 
 class OrderListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
 
 
 class OrderRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = OrderSerializer
     queryset = Order.objects.all()

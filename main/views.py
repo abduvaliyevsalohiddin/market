@@ -8,7 +8,7 @@ from drf_yasg.utils import swagger_auto_schema
 
 
 class CategoryListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
 
@@ -19,7 +19,7 @@ class CategoryListCreateView(ListCreateAPIView):
 
 
 class ProductAPIView(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(
         manual_parameters=[
@@ -63,13 +63,13 @@ class ProductAPIView(APIView):
 
 
 class ProductRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
 
 
 class CommentListCreateAPIView(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(
         manual_parameters=[
@@ -110,6 +110,6 @@ class CommentListCreateAPIView(APIView):
 
 
 class CommentRetrieveDestroyView(RetrieveDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CommentSerializer
     queryset = Comment.objects.all()
