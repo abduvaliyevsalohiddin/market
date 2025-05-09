@@ -47,7 +47,12 @@ class ProductAPIView(APIView):
             projects = projects.filter(category=category_id)
 
         serializer = ProductSerializer(projects, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        # return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response({
+            'count': projects.count(),
+            'results': serializer.data
+        }, status=status.HTTP_200_OK)
+
 
     @swagger_auto_schema(
         request_body=ProductSerializer,

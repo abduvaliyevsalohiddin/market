@@ -43,7 +43,7 @@ class Product(CoreModel):
     image = models.ImageField(upload_to="product_image", blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     price = models.FloatField(default=0.0)
-    piece = models.PositiveIntegerField(default=0, validators=[MinValueValidator(10), MaxValueValidator(100)])
+    piece = models.PositiveIntegerField(default=1)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     city = models.CharField(max_length=30, choices=CITY_CHOICES)
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
