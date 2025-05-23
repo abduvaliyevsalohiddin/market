@@ -19,18 +19,6 @@ class SelectedProductRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = SelectedProduct.objects.all()
 
 
-class CartListCreateView(ListCreateAPIView):
-    # permission_classes = [IsAuthenticated]
-    serializer_class = CartSerializer
-    queryset = Cart.objects.all()
-
-
-class CartRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    # permission_classes = [IsAuthenticated]
-    serializer_class = CartSerializer
-    queryset = Cart.objects.all()
-
-
 class CartItemListCreateView(ListCreateAPIView):
     # permission_classes = [IsAuthenticated]
     serializer_class = CartItemSerializer
@@ -53,3 +41,15 @@ class OrderRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # permission_classes = [IsAuthenticated]
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
+
+
+class OrderItemListCreateView(ListCreateAPIView):
+    # permission_classes = [IsAuthenticated]
+    serializer_class = OrderItemSerializer
+    queryset = OrderItem.objects.all()
+
+
+class OrderItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    # permission_classes = [IsAuthenticated]
+    serializer_class = OrderItemSerializer
+    queryset = OrderItem.objects.all()

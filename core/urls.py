@@ -46,14 +46,14 @@ urlpatterns = [
     path('selectedProducts/', SelectedProductListCreateView.as_view()),
     path('selectedProducts/<int:pk>/', SelectedProductRetrieveUpdateDestroyAPIView.as_view()),
 
-    path('carts/', CartListCreateView.as_view()),
-    path('carts/<int:pk>/', SelectedProductRetrieveUpdateDestroyAPIView.as_view()),
-
     path('cartItems/', CartItemListCreateView.as_view()),
     path('cartItems/<int:pk>/', CartItemRetrieveUpdateDestroyAPIView.as_view()),
 
     path('orders/', OrderListCreateView.as_view()),
     path('orders/<int:pk>/', OrderRetrieveUpdateDestroyAPIView.as_view()),
+
+    path('orderItems/', OrderItemListCreateView.as_view()),
+    path('orderItems/<int:pk>/', OrderItemRetrieveUpdateDestroyAPIView.as_view()),
 
 ]
 
