@@ -64,7 +64,6 @@ class ReviewListCreateView(ListCreateAPIView):
     queryset = Review.objects.all()
 
 
-
 class ReviewRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # permission_classes = [IsAuthenticated]
     serializer_class = ReviewSerializer
