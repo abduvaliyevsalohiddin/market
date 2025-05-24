@@ -53,3 +53,19 @@ class OrderItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # permission_classes = [IsAuthenticated]
     serializer_class = OrderItemSerializer
     queryset = OrderItem.objects.all()
+
+    serializer_class = OrderSerializer
+    queryset = Order.objects.all()
+
+
+class ReviewListCreateView(ListCreateAPIView):
+    # permission_classes = [IsAuthenticated]
+    serializer_class = ReviewSerializer
+    queryset = Review.objects.all()
+
+
+
+class ReviewRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    # permission_classes = [IsAuthenticated]
+    serializer_class = ReviewSerializer
+    queryset = Review.objects.all()

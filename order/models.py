@@ -44,3 +44,13 @@ class OrderItem(models.Model):
     def __str__(self):
         return f"{self.order.id}: {self.product.name}"
 
+
+class Review(CoreModel):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    comment = models.TextField(blank=True, null=True)
+    rate = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.user.id}"

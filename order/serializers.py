@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from .models import *
+from user.serializers import *
+from main.serializers import *
 
 
 class SelectedProductSerializer(serializers.ModelSerializer):
@@ -23,4 +25,13 @@ class OrderSerializer(serializers.ModelSerializer):
 class OrderItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderItem
+        fields = '__all__'
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+    user = ProfileSerializer(many=False, read_only=True)
+    product = ProductSerializer(many=False, read_only=True)
+
+    class Meta:
+        model = Review
         fields = '__all__'
