@@ -28,10 +28,16 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ReviewSerializer(serializers.ModelSerializer):
+class ReviewListSerializer(serializers.ModelSerializer):
     user = ProfileSerializer(many=False, read_only=True)
     product = ProductSerializer(many=False, read_only=True)
 
+    class Meta:
+        model = Review
+        fields = '__all__'
+
+
+class ReviewCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'

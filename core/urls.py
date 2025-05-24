@@ -55,8 +55,11 @@ urlpatterns = [
     path('orderItems/', OrderItemListCreateView.as_view()),
     path('orderItems/<int:pk>/', OrderItemRetrieveUpdateDestroyAPIView.as_view()),
 
-    path('review/', ReviewListCreateView.as_view()),
-    path('review/<int:pk>/', RetrieveUpdateDestroyAPIView.as_view()),
+    path('review_list/', ReviewListView.as_view()),
+    path('review_create/', ReviewCreateView.as_view()),
+    path('review_list/<int:pk>/', ReviewRetrieveAPIView.as_view()),
+    path('review_update/<int:pk>/', ReviewUpdateAPIView.as_view()),
+    path('review_destroy/<int:pk>/', ReviewDestroyAPIView.as_view()),
 ]
 
 if settings.DEBUG:
